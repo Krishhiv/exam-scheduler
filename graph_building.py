@@ -1,7 +1,6 @@
 from data_loading import students_courses
-from visualisation import visualise  # Import the visualisation module
+from visualisation import visualise 
 
-# Create the graph
 graph = {}
 
 for courses in students_courses.values():
@@ -18,5 +17,8 @@ for courses in students_courses.values():
                 graph[course2] = set()
             graph[course2].add(course1)
 
-# Call the visualise function to display the graph
+
+for course, clashes in graph.items():
+    print(f"{course}: {clashes}")
+
 visualise(graph)

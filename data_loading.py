@@ -2,7 +2,7 @@ import csv
 
 students_courses = {}
 
-with open("./small-test-set.csv", "r") as f:
+with open("./Data/medium-test-set.csv", "r") as f:
     reader = csv.DictReader(f)
 
     for row in reader:
